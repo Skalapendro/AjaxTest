@@ -3,10 +3,11 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 #from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from  appium.webdriver.common.touch_action import TouchAction
+from appium.webdriver.common.touch_action import TouchAction
 
 #subprocess.Popen(['appium', 'server', '--address', '127.0.0.1', '--port', '4723', '--allow-cors'])
 #time.sleep(10)
+
 caps = {
   "appium:autoGrantPermissions": True,
   "appium:automationName": "uiautomator2",
@@ -47,7 +48,7 @@ menu.click()
 
 driver.find_element(by=AppiumBy.XPATH, value='//android.widget.TextView[@resource-id="com.ajaxsystems:id/title" and @text="App Settings"]').click()
 
-#driver.swipe(470, 1400, 470, 1200, 400)
+#driver.swipe(350, 595, 354, 300, 400)
 
 #driver.find_element(by=AppiumBy.ANDROID_UIAUTOMATOR, value='new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(text("Sign out"))')
 
@@ -59,4 +60,5 @@ signOut = driver.find_element(by=AppiumBy.XPATH, value='//android.widget.TextVie
 signOut.click()
 
 time.sleep(7)
+
 driver.quit()
